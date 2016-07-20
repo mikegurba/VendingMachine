@@ -7,6 +7,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachine", "VendingMa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachine.Tests", "VendingMachine.Tests\VendingMachine.Tests.csproj", "{5740E685-E213-432F-B222-2B119FBD3390}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{D8FA1683-6174-4841-8C1B-0C5672C8C642}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{34692A11-4B9B-41F5-BA7D-A6B670448467}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{55F95CCC-AA17-49DE-9E28-E59BBE05F751}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\VendingMachine.json = PublishScripts\Templates\VendingMachine.json
+		PublishScripts\Templates\VendingMachine.param.dev.json = PublishScripts\Templates\VendingMachine.param.dev.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +37,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{34692A11-4B9B-41F5-BA7D-A6B670448467} = {D8FA1683-6174-4841-8C1B-0C5672C8C642}
+		{55F95CCC-AA17-49DE-9E28-E59BBE05F751} = {D8FA1683-6174-4841-8C1B-0C5672C8C642}
 	EndGlobalSection
 EndGlobal
