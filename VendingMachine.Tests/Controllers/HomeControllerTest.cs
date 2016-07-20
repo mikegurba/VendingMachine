@@ -6,49 +6,24 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendingMachine;
 using VendingMachine.Controllers;
+using VendingMachine.Models;
 
 namespace VendingMachine.Tests.Controllers
 {
     [TestClass]
-    public class HomeControllerTest
+    public class StartTest
     {
         [TestMethod]
-        public void Index()
+        public void TestThatThereIsSeedData()
         {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.Index() as ViewResult;
-
-            // Assert
-            Assert.IsNotNull(result);
+            StartValues startValues = new StartValues();
+            Assert.IsNotNull(startValues.customer);
+            Assert.IsNotNull(startValues.inventory);
         }
-
-        [TestMethod]
-        public void About()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.About() as ViewResult;
-
-            // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
-        }
-
-        [TestMethod]
-        public void Contact()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
-
-            // Assert
-            Assert.IsNotNull(result);
-        }
+    } 
+    [TestClass]
+    public class HomeControllerTest
+    {
+        
     }
 }

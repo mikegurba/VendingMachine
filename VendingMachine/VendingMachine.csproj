@@ -173,6 +173,7 @@
     <Compile Include="Models\Coin.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\StartValues.cs" />
     <Compile Include="Models\VendingInventory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

@@ -8,5 +8,6 @@ namespace VendingMachine.Models
     public class Customer
     {
         public List<Coin> Coins { get; set; }
+        public List<Product> Products { get; set; }
     }
 }
